@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="css/style.css" title="" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+<nav class="grey darken-3">
+  <div class="nav-wrapper">
+    <a  class="brand-logo center" href="/articles/<%=article.slug %>">Article Dashboard</a>
+	</div>
+	</nav>
+
+
+   <div class="container">
+	<div class="firstpart">
+	<h4 class="articleTile"> <%= article.title %> </h4>
+	<small class="text-muted"> <%= article.createdAt.toLocaleDateString() %> </small>
+</div>
+ <div class="btnPart">
+	<a href="/" class="btn grey ">See Articles</a>
+	<a href="/articles/edit/<%= article.id %>" class="btn blue lighten-3">Edit</a>
+</div>
+	<div class="showMarkdown">
+	<%- article.sanitizeHTML %>
+	</div> 
+</div>
+</body>
+</html>

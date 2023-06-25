@@ -1,0 +1,23 @@
+
+       <div class="row">
+         <div class="input-field col s12">
+           <input name="title" type="text" class="validate" value="<%= article.title %>">
+           <label for="title">Title</label>
+         </div>
+          <div class="input-field col s12">
+            <textarea name="description" class="materialize-textarea">
+		<%= article.description %>		
+	</textarea>
+            <label for="description">Description</label>
+          </div>
+         
+          <div class="input-field col s12">
+            <textarea name="markdown" required class="materialize-textarea">
+		<%= article.markdown %>
+	</textarea>
+            <label for="markdown">Markdown</label>
+          </div>
+       </div>
+	<input type="submit" class="btn teal lighten-2" value="Create">
+	<a href="/" class="btn red lighten-3">Cancel</a>
+  
