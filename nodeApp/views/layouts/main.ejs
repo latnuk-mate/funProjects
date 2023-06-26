@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="css/styles.css" title="" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" title="" type="text/css" />
+
+</head>
+<body>
+<%- include('../partials/header') %>
+<%- include('../partials/add_btn') %>
+  <div class="container">
+	<%- body %>
+   </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js" integrity="sha512-P4rrEImABBYtBFdmrFPqF8rjh8iiRiupfQ4KLrBCL8dAivLiM2nh+1bJQeMb2ZglmIlGZdfTtgGdXH6H/hGVeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script> 
+	M.Sidenav.init(document.querySelector('.sidenav')); 
+	M.FormSelect.init(document.querySelector('.status'));
+	
+	
+	CKEDITOR.replace('text-body', {
+	plugins : 'wysiwygarea, basicstyles,toolbar,link'
+});
+
+</script>
+</body>
+</html>
