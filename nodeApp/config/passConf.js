@@ -6,8 +6,10 @@ const User = require('../model/User');
 
 module.exports = function(){
     let callback = async(accessToken, refreshToken, profile, done)=>{
-     let newUser = {
+     console.log(profile);
+	let newUser = {
 	googleId: profile.id,
+	displayName: profile.displayName,
 	firstName: profile.name.givenName,
 	lastName: profile.name.familyName,
 	image 	: profile.photos[0].value

@@ -8,7 +8,7 @@ let StorySchema = new mongoose.Schema({
     trim: true,
    required:true
   },
-  body:{
+ text_body:{
     type: String,
     require:true
   },
