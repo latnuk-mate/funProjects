@@ -17,10 +17,10 @@ let StorySchema = new mongoose.Schema({
       default: 'public',
 	enum: ['public', 'private']
     },
-    user: [{
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       ref:'User'
-    }],
+    },
   createdAt:{
     type: Date,
     default: Date.now

@@ -23,12 +23,12 @@ var moment = require('moment');
 	EditIcon: function(storyUser, loggedUser, id, float=true){
 		 if(storyUser._id.toString() == loggedUser._id.toString()){
 			if(float){
-		`<a href="/edit/user<%=id %>" class="btn-floating halfway-fab blue">
-    		<i class="fas fa-edit fa-small"></i> </a>`
+		return "<a href=`stories/edit/${<%= id %>}` class=`btn-floating blue halfway-fab`>
+    		<i class=`fa fa-pen-to-square fa-small`></i> </a>"
 		}
 		else{
-		`<a href="/edit/user<%=id %>">
-    			<i class="fas fa-edit fa-small"></i> </a>`
+		return "<a href=`stories/edit/${<%= id %>}`>
+    			<i class=`fas fa-pen-to-sqaure fa-small`></i> </a>"
 		}}
 	else{
  	return "";

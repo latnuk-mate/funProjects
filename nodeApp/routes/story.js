@@ -8,7 +8,7 @@ const { NotAuthUser } = require('../middleware/isvalid');
 //let newStories = new Story();
 
 router.get('/add', NotAuthUser, (req,res,next)=>{
-	res.render('stories/add_story')
+	res.render('stories/add_story', {stories : new Story()})
 });
 
 router.post('/', NotAuthUser, async(req,res,next)=>{
