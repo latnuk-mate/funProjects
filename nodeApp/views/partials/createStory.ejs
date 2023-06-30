@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="title" name = 'title' value="<%= stories.title %>" type="text" class="validate">
+          <input id="title" name = 'title' type="text" value="<%=stories.title%>" class="validate">
           <label for="title">Add a Title</label>
         </div>
       </div>
@@ -27,7 +19,7 @@
 	 <h5>compose story..</h5>
  <textarea  name="text_body">
 	<%= stories.text_body %>
-</textarea>
+	</textarea>
        </div>
        </div>
 	<div class="row">
@@ -36,5 +28,3 @@
           <a href="/dashboard" class="btn red lighten-3">cancel</a>
         </div>
       </div>
-</body>
-</html>
