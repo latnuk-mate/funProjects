@@ -23,3 +23,6 @@ p{
 .bookIcon{
   margin-right: 5px;
 }
+.fa-small{
+  font-size: 18px !important;
+}

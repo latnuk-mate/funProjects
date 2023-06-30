@@ -6,39 +6,6 @@
 </head>
 
 <body>
-  <div class="row">
-	<h3> Add Story </h3>
-    <form class="col s12" action="/stories" method="post">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="title" name = 'title' type="text" class="validate">
-          <label for="title">Add a Title</label>
-        </div>
-      </div>
-     <div class="row">
-        <div class="input-field col s12">
-          <select class='status' name="status">
-            <option value="public">Public</option>
-            <option value="private">Private</option>
-          </select>
-          <label>Story Status</label>
-        </div>
-     </div>
-       <div class="row">
-         <div class="input-field col s12">
-	 <h5>compose story..</h5>
- <textarea  name="text_body">
-</textarea>
-       </div>
-       </div>
-	<div class="row">
-        <div class="input-field col-s12">
-          <input type="submit" value="Save" class="btn">
-          <a href="/dashboard" class="btn red lighten-3">cancel</a>
-        </div>
-      </div>
-
-    </form>
-  </div>
+ <%- include('../partials/createStory') %>
 </body>
 </html>

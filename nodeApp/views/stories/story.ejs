@@ -1,12 +1,12 @@
  
-<h3> Your Stories </h3>
+<h3> Your Stories <% var loggedUser = user %> </h3>
 <% if(stories.length > 0){ %>
 <% stories.forEach((story) => { %>
 <div class="row">
    <div class="col s12 m7">
      <div class="card">
        <div class="card-image">
-              <%= helper.EditIcon(story.user, `<%= ../user %>` , story._id) %>
+       <%- helper.EditIcon(story.user, loggedUser, story._id) %>
        </div>
        <div class="card-content center-align">
         <h5><%= story.title %></h5>
@@ -15,8 +15,8 @@
 	</p>
         <br>
         <div class="chip">
-          <img src="<%=story.user.image%>" alt=""/>
-       <a href="stories/user/<%=story.user._id %>"><%=story.user.displayName%>
+          <img src="<%= story.user.image %>" alt=""/>
+       <a href="stories/user/<%=story.user._id %>"><%= story.user.displayName %>
 	</a>
         </div>
        </div>

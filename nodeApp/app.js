@@ -43,7 +43,7 @@ app.use(passport.session());
 
 // configuing user global variable...
 app.use((req,res,next)=>{
-	res.locals.user = req.user || null;
+	res.locals.user = req.user;
 	next();
 });
 // overriding HTTP METHOD  to make session logged out.

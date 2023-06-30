@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="row">
+	<h3> Add Story </h3>
+    <form class="col s12" action="/stories" method="post">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="title" name = 'title' type="text" value="<%=stories.title%>" class="validate">
+          <label for="title">Add a Title</label>
+        </div>
+      </div>
+     <div class="row">
+        <div class="input-field col s12">
+          <select class='status' name="status">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+          </select>
+          <label>Story Status</label>
+        </div>
+     </div>
+       <div class="row">
+         <div class="input-field col s12">
+	 <h5>compose story..</h5>
+ <textarea  name="text_body">
+    <%=stories.text_body%>
+</textarea>
+       </div>
+       </div>
+	<div class="row">
+        <div class="input-field col-s12">
+          <input type="submit" value="Save" class="btn">
+          <a href="/dashboard" class="btn red lighten-3">cancel</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

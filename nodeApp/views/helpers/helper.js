@@ -20,18 +20,22 @@ var moment = require('moment');
 		return string.replace(/(<([^>]+)>)/ig, '');
 	},
 
-	EditIcon: function(storyUser, loggedUser, id, float=true){
-		 if(storyUser._id.toString() == loggedUser._id.toString()){
-			if(float){
-		`<a href="/edit/user<%=id %>" class="btn-floating halfway-fab blue">
-    		<i class="fas fa-edit fa-small"></i> </a>`
+	EditIcon: function(storyUser, loggedUser, id, floating=true){
+	try{
+		if(storyUser._id.toString() == loggedUser._id.toString()){
+			if(floating){
+		return `<a href="stories/edit<%= id %>" class="btn-floating halfway-fab blue lighten-3">
+		<i class="fa fa-pen-to-square fa-small"></i> </a>`
 		}
 		else{
-		`<a href="/edit/user<%=id %>">
-    			<i class="fas fa-edit fa-small"></i> </a>`
+			return `<a href="stories/edit<%= id %>">
+			<i class="fa fa-pen-to-square fa-small"></i> </a>`
 		}}
 	else{
  	return "";
+	}
+	}catch(err){
+		console.log(err)
 	}
 }
 }

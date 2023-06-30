@@ -1,22 +1,18 @@
 const express = require('express')
 const router = express.Router();
-const Story = require('../model/story')
-//const User = require('../model/User');
+const Story = require('../model/story');
 const { NotAuthUser } = require('../middleware/isvalid');
-
-//let newUser = new User();
-//let newStories = new Story();
+const { route } = require('./auth');
 
 router.get('/add', NotAuthUser, (req,res,next)=>{
-	res.render('stories/add_story')
+	res.render('stories/add_story', {stories : new Story()})
 });
 
 router.post('/', NotAuthUser, async(req,res,next)=>{
 	try{
 	req.body.user = req.user.id;
 	 await Story.create(req.body);
-	 //newStory.user.push(newUser);
-	// await newStory.save((err)=>{
+	 
 	res.redirect('/dashboard');
 }catch(err){
 	console.log(err);
@@ -37,5 +33,10 @@ router.get('/', NotAuthUser, async (req,res,next)=>{
 }catch(err){console.log(err)}
 })
 
+// Edit stories...
+router.get('/edit:id', async(req,res, next)=>{
+	let story = await Story.find({id : req.params.id});
+	res.render('stories/storyEdit', {stories : story});
+})
 
 module.exports = router;
