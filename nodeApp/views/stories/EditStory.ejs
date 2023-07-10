@@ -9,7 +9,7 @@
 
 	<div class="row">
 	<h4> Edit Your Story </h4>
-	<form class="col s12" action="/stories?_method=PUT" method="post">
+	<form class="col s12" action="/stories/<%=stories._id %>?_method=PUT" method="post">
 	<%- include('../partials/createStory') %>
 	</form>
 	</div>

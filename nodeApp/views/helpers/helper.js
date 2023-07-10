@@ -27,8 +27,8 @@ var moment = require('moment');
     		<i class="fa fa-pen-to-square fa-small"></i> </a>`
 		}
 		else{
-		return `<a href="stories/edit/${ id }">
-    		<i class="fas fa-pen-to-sqaure fa-small"></i> </a>`
+		return `<a href="/stories/edit/${ id }">
+    		<i class="fa fa-pen-to-square"></i> </a>`
 		}}
 	else{
 	return ''; }

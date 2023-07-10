@@ -7,7 +7,6 @@
      <div class="card">
        <div class="card-image">
 	<%- helper.EditIcon(story.user, loggedUser, story._id) %>
-		<% console.log(story._id) %>
 	</div>
        <div class="card-content center-align">
         <h5><%= story.title %></h5>
@@ -22,7 +21,7 @@
         </div>
        </div>
        <div class="card-action center-align">
-         <a href="/stories/<%=story._id%>" class="btn red lighten-3">Read more</a>
+         <a href="/stories/view/<%= story._id %>" class="btn red lighten-3">Read more</a>
        </div>
      </div>
    </div>

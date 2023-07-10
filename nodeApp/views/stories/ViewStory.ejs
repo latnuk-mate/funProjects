@@ -1,0 +1,28 @@
+
+<% var loggedUser = user %>
+      <h5><%= story.title %>
+    <span><%- helper.EditIcon(story.user, loggedUser , story._id, false) %></span>
+	</h5>	
+ <div class="col s12 m8">
+     <div class="card">
+       <div class="card-content">
+  <strong><%= helper.formatDate(story.createdAt, " MMMM Do YYYY, h:mm:ss a") %> </strong>      
+         <p> <%= helper.stripTag(story.text_body) %> </p>
+       </div>
+        </div> 
+	</div>
+
+	  <div class="col s12 m4">
+     <div class="card">
+       <div class="card-content center-align">
+         <p><%= story.user.displayName %></p>
+         <img src="<%= story.user.image %>" alt="userImage" class="circle smallImage">
+       </div>
+       <div class="card-action center-align">
+          <a href="/stories/user/<%= story.user._id %> ">More from 
+            <%= story.user.firstName %>
+          </a>
+       </div>
+        </div> 
+       </div>
+

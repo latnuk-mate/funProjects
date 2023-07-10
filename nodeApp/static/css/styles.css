@@ -23,13 +23,11 @@ p{
 .bookIcon{
   margin-right: 5px;
 }
-<<<<<<< HEAD
 
-.fa-small{
-	font-size: 17px !important ;
-}
-=======
 .fa-small{
   font-size: 18px !important;
 }
->>>>>>> 97e524f74ce123be90be1ecd66169179cc961b31
+.smallImage{
+	width: 170px;
+}
+

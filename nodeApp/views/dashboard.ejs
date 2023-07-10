@@ -7,16 +7,24 @@
               <th>Title</th>
               <th>Date</th>
               <th>Status</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
           <% stories.forEach((story)=>{ %>
             <tr>
-              <td><a href="stories/<%= story._id %>"><%=story.title %></a></td>
+              <td><a href="stories/view/<%= story._id %>"><%=story.title %></a></td>
  <td><%= helper.formatDate(story.createdAt, " MMMM Do YYYY, h:mm:ss a") %></td>
             <td><span class="dash-status"><%= story.status %> </span></td>
-            <td></td>
+            <td>
+		<a href="/stories/edit/<%=story._id %>" class="btn btn-float blue lighten-2">
+                <i class="fa fa-pen-to-square"> </i> </a>
+		</td>
+	<td>
+        <form class="delete" action="/stories/delete/<%=story._id%>?_method=DELETE" method="post">
+                <button class="btn red lighten-3" type='submit'>
+                <i class="fa fa-trash "> </i> </button>
+        </form>
+	</td>
             </tr>
             <% }) %>
           </tbody>
