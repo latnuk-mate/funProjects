@@ -1,0 +1,12 @@
+<div class="text-center fw-bold">Hello, <%= user.userName %>, Welcome to github query..</div>
+ <div class="card p-3">
+    <div class="card-body tex text-center">
+      <div class="image-section mb-2">
+        <img src="<%= user.Image %>" alt="userImage" class="userImage">
+      </div>
+     <div class="card-text">
+        <p class="mb-2 fst-italic">Click to visit your github repo..</p>
+        <a href="<%= user.ProfileUrl %>"><%= user.displayName %></a>
+     </div>
+    </div>
+ </div>
